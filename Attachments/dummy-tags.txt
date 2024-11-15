@@ -1,0 +1,4 @@
+<meta name="twitter:creator" content="[TWITTER_ACCOUNT]"/>
+<meta name="twitter:site" content="[TWITTER_ACCOUNT]" />
+<meta name="expires" httpEquiv="Expires" content="[EXPIRATION_DATE]" />
+<meta property="og:image" content="[OG_IMAGE_URL]" />

@@ -1,0 +1,10 @@
+<meta name="twitter:creator" content="@takemyclas19231"/>
+<meta name="twitter:site" content="@takemyclas19231" />
+<meta name=”expires” http-equiv=”Expires” content= />
+<meta property="og:image" content="">
+
+<meta property="og:image" content="https://takingmyclassesonline.com/assets/weblogo.png">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="Concerned about your online classes? Get online class assistance from our professionals. Our lectures, quizzes, tests, midterms, and final examinations." />
+
+ <meta property="article:publisher" content="https://www.facebook.com/takingmyclassesonline/" />

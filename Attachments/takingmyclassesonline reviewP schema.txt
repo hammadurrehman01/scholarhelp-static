@@ -1,0 +1,14 @@
+<script type="application/ld+json">
+        {
+            "@context": "http://schema.org/",
+            "@type": "product",
+            "name": "takingmyclassesonline",
+            "image": "https://takingmyclassesonline.com/assets/weblogo.png",
+            "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.9",
+                "ratingCount": "30"
+            }
+        }
+
+</script>

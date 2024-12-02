@@ -6,14 +6,11 @@ import nodemailer from "nodemailer";
 import { transporter } from "../(backend)/action/Transporter";
 
 export async function GET(req: NextRequest, res: NextResponse) {
-  
   //**********Read Search params and set the value to variable  **********/
   const searchParams = req.nextUrl.searchParams;
   const afterPaymentToken = searchParams.get("after_payment_token") as string;
   const paymentStatus = searchParams.get("xxxpayment_status") as string;
   const OrderId = searchParams.get("payment_id") as string;
-
-
 
   //**********Reading Json File based on afterPaymentToken and get the Data********* */
   const filePath = path.join(
@@ -58,7 +55,7 @@ export async function GET(req: NextRequest, res: NextResponse) {
 </body>
     `,
   };
-  if(paymentStatus === "true"){
+  if (paymentStatus === "true") {
     transporter.sendMail(supportMailOptions, (error: any, info: any) => {
       if (error) {
         console.error("Email send error:", error);
@@ -66,9 +63,8 @@ export async function GET(req: NextRequest, res: NextResponse) {
         // console.log("Client Email sent: " + info.response);
       }
     });
-  } 
+  }
 
-  
   //**********Sending  Email to client **********/
 
   const clientPaymentMailOptions = {
@@ -306,7 +302,7 @@ export async function GET(req: NextRequest, res: NextResponse) {
     `,
   };
 
-  if(paymentStatus === "true"){
+  if (paymentStatus === "true") {
     transporter.sendMail(clientPaymentMailOptions, (error: any, info: any) => {
       if (error) {
         console.error("Email send error:", error);
@@ -314,8 +310,7 @@ export async function GET(req: NextRequest, res: NextResponse) {
         // console.log("Client Email sent: " + info.response);
       }
     });
-  } 
-
+  }
 
   //**********Delete the json **********//
 
@@ -328,14 +323,15 @@ export async function GET(req: NextRequest, res: NextResponse) {
   });
 
   //**********Redirect the user to thankyou page**********//
-  if(paymentStatus === "true"){
-    return NextResponse.redirect("https://takingmyclassesonline.com/thank-you-order?py-_verify_status=true&curnety789110opq012=true&usr-lgheigt345rst678=true&def901uvw234=tdgl-abbrev&hij567890=true&opq234rst567=true&stu890vwx345=true&yz123abc678=true&pqr234stu567=true&uvw678xyz901=true&xyz234ghi567=true&abc678opq123=true&lmn234rst890=true");
-  } else{
+  if (paymentStatus === "true") {
+    return NextResponse.redirect(
+      "https://takingmyclassesonline.com/thank-you-order?py-_verify_status=true&curnety789110opq012=true&usr-lgheigt345rst678=true&def901uvw234=tdgl-abbrev&hij567890=true&opq234rst567=true&stu890vwx345=true&yz123abc678=true&pqr234stu567=true&uvw678xyz901=true&xyz234ghi567=true&abc678opq123=true&lmn234rst890=true"
+    );
+  } else {
     return NextResponse.redirect("https://takingmyclassesonline.com/thank-you");
   }
 
   // return NextResponse.redirect("https://takingmyclassesonline.com/thank-you");
- 
 }
 // http://localhost:3000/thank-you
 

@@ -1,14 +1,13 @@
+import { ThemeProvider } from "@/components/ui/theme-provider";
+import Tawkto from "@/lib/Tawto";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
-import "./globals.css";
+import "../builder-registry";
 import Footer from "./(Home)/_components/Footer";
-import { ThemeProvider } from "@/components/ui/theme-provider";
 import Navbar2 from "./(Home)/_components/Navbar2";
-import Tawkto from "@/lib/Tawto";
-import ScrollToTop from "./ScrollToTop";
-import Head from "next/head";
 import TopBar from "./(Home)/TopBar";
-
+import "./globals.css";
+import ScrollToTop from "./ScrollToTop";
 
 const inter = Montserrat({
   subsets: ["latin"],
